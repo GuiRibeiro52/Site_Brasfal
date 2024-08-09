@@ -71,8 +71,8 @@ const Produtos = ({ onFilterChange }) => {
   };
 
   return (
-    <div >
-      <div className="relative w-full px-4 py-8 bg-secondary">
+    <div>
+      <div className="w-full px-4 py-8 bg-secondary flex justify-between">
         <div className="flex max-w-[1536px] mx-auto">
           <ul>
             <li>
@@ -90,6 +90,14 @@ const Produtos = ({ onFilterChange }) => {
               </div>
             )}
           </ul>
+        </div>
+        <div className='max-w-[1536px] mx-auto'>
+          <span>Ordenar por: </span>
+          <select onChange={(e) => onSortChange(e.target.value)} className="border border-gray-300 rounded">
+            <option value="Default">Default</option>
+            <option value="A to Z">A to Z</option>
+            <option value="Z to A">Z to A</option>
+          </select>
         </div>
       </div>
       <div className="flex justify-center xl:justify-evenly items-center max-w-[1536px] mx-auto">

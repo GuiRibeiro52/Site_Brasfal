@@ -1,0 +1,65 @@
+{
+    "posts": [
+        {
+            "title": "PR-200",
+            "text": "Suporte para TV modelo PR-200",
+            "image": "/products/pr200-01.png",
+            "images": [
+                "/products/pr200-01.png",
+                "/products/pr200-02.png",
+                "/products/pr200-03.png",
+                "/products/pr200-04.png"
+            ],
+            "description": "",
+            "id": "1",
+            "category": "Suporte-para-tv",
+            "SKU": ""
+        },
+        {
+            "title": "PR-300",
+            "text": "Suporte para TV modelo PR-300",
+            "image": "/products/pr300-01.png",
+            "images": [
+                "/products/pr300-01.png",
+                "/products/pr300-02.png",
+                "/products/pr300-03.png",
+                "/products/pr300-04.png",
+                "/products/pr300-05.png"
+            ],
+            "description": "",
+            "id": "2",
+            "category": "Suporte-para-tv",
+            "SKU": ""
+        },
+        {
+            "title": "PR-400",
+            "text": "Suporte para TV modelo PR-400",
+            "image": "/products/pr400-01.png",
+            "images": [
+                "/products/pr400-01.png",
+                "/products/pr400-02.png",
+                "/products/pr400-03.png",
+                "/products/pr400-04.png"
+            ],
+            "description": "",
+            "id": "3",
+            "category": "Suporte-para-tv",
+            "SKU": ""
+        },
+        {
+            "title": "PR-500",
+            "text": "Suporte para TV modelo PR-500",
+            "image": "/products/pr500-01.png",
+            "images": [
+                "/products/pr500-01.png",
+                "/products/pr500-02.png",
+                "/products/pr500-03.png",
+                "/products/pr500-04.png"
+            ],
+            "description": "",
+            "id": "3",
+            "category": "Suporte-para-tv",
+            "SKU": ""
+        }
+    ]
+}

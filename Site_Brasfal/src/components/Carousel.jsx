@@ -3,30 +3,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-import img1 from '../assets/suporteteste.png'
-import img2 from '../assets/suporteteste.png'
-import img3 from '../assets/suporteteste.png'
-import img4 from '../assets/suporteteste.png'
-import img5 from '../assets/suporteteste.png'
-import img6 from '../assets/suporteteste.png'
-import img7 from '../assets/suporteteste.png'
-import img8 from '../assets/suporteteste.png'
-import img9 from '../assets/suporteteste.png'
-import img10 from '../assets/suporteteste.png'
-import img11 from '../assets/suporteteste.png'
-import img12 from '../assets/suporteteste.png'
-import img13 from '../assets/suporteteste.png'
-import img14 from '../assets/suporteteste.png'
-import img15 from '../assets/suporteteste.png'
-import img16 from '../assets/suporteteste.png'
-import img17 from '../assets/suporteteste.png'
-import img18 from '../assets/suporteteste.png'
-import img19 from '../assets/suporteteste.png'
-import img20 from '../assets/suporteteste.png'
+import img1 from '../../public/products/pr200-01.png'
+import img2 from '../../public/products/pr300-01.png'
+import img3 from '../../public/products/pr400-01.png'
+import img4 from '../../public/products/pr500-01.png'
+
 
 const images = [
-  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
-  img11, img12, img13, img14, img15, img16, img17, img18, img19, img20
+  img1, img2, img3, img4
 ];
 
 const Carousel = () => {
@@ -37,7 +21,7 @@ const Carousel = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     arrows: true,
     responsive: [
       {
@@ -72,7 +56,7 @@ const Carousel = () => {
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="px-2"> 
-            <img src={image} alt={`Slide ${index + 1}`} className="w-full h-auto rounded-lg" />
+            <img src={image} alt={`Slide ${index + 1}`} className="w-full h-[250px] rounded-lg" />
           </div>
         ))}
       </Slider>

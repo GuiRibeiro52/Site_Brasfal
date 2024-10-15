@@ -4,7 +4,7 @@ import living from '../assets/living.png'
 
 const Home = () => {
   return (
-    <div className="container mx-auto px-4 py-8 mt-24">
+    <div className="container mx-auto px-4 py-8 mt-24 text-white">
       <div className="grid grid-cols-1 md:flex md:justify-between md:items-center">
         <div className="md:w-[900px] h-[500px] flex flex-col items-center justify-center gap-10">
           <h1 className="text-[52px] font-bold text-center">

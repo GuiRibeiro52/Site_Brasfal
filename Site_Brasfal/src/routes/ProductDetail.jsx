@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 const ProductDetail = () => {
@@ -35,9 +36,9 @@ const ProductDetail = () => {
 
   return (
     <div>
-      <div className='container px-5 mx-auto font-poppins justify-center mt-[35px] xl:flex'>
+      <div className='container px-5 mx-auto font-poppins justify-center mt-32 xl:flex'>
         <div className='flex flex-col-reverse justify-center gap-[30px] 2xl:flex-row m-10'>
-          <div className='flex pb-5 2xl:flex-col 2xl:space-y-4'>
+          <div className='flex justify-center pb-5 gap-1 2xl:flex-col 2xl:space-y-4'>
             {product.images.map((img, index) => (
               <img
                 key={index}
@@ -50,28 +51,41 @@ const ProductDetail = () => {
           </div>
           <img src={selectedImage} alt={product.title} className='2xl:w-[481px] 2xl:h-[500px] rounded-[10px]' />
         </div>
-        <div className='mr-5'>
-          <h2 className='text-[42px] font-normal'>{product.title}</h2>
-          <p className='text-2xl font-medium text-black mb-[15px]'>R$ {product.price ? product.price.toFixed(2) : 'N/A'}</p>
+        <div className='mr-5 text-white'>
+          <h2 className='text-[42px] font-semibold'>{product.title}</h2>
+          {/* <p className='text-2xl font-medium  mb-[15px]'>R$ {product.price ? product.price.toFixed(2) : 'N/A'}</p> */}
           
           <div className='mt-6'>
-            <p className='w-[424px] text-[13px] font-normal mb-[22px]'>{product.description || 'No description available.'}</p>
+            <h3 className='w-[424px] text-2xl font-medium mb-[22px]'>{product.primaryDescription || 'No description available.'}</h3>
           </div>
-          <div className='border-t flex flex-col gap-[12px] text-base mb-[67px]'>
-            <p className='mt-[41px] text-black'>SKU: {product.sku || 'N/A'}</p>
-            <p className='text-black'>Categoria: {product.category}</p>
-            
+          <div className='border-t flex flex-col gap-10 text-base mb-[67px]'>
+            <p className='mt-[41px] '>SKU: {product.SKU || 'N/A'}</p>
+            <p >Categoria: {product.category}</p> 
           </div>
+          {/* <div>
+            <button className="w-[222px] h-[74px] bg-button text-white bg-slate-500 mb-8"><Link to={product.link}>COMPRE AGORA</Link></button>
+          </div> */}
         </div>
       </div>
-      <div className='container px-5 grid 2xl:mx-auto 2xl:py-10 font-poppins 2xl:flex 2xl:flex-col 2xl:justify-center border-t'>
-        <div className='flex items-center justify-center gap-[130px] text-2xl mb-9'>
-          <h3 className='font-medium'>Descrição</h3>
+      <div className='text-white container px-5 grid 2xl:mx-auto 2xl:py-10 font-poppins 2xl:flex 2xl:flex-col 2xl:justify-center border-t'>
+        <div className='flex items-center justify-center gap-[130px] text-5xl my-9'>
+          <h3 className='font-bold'>Descrição</h3>
         </div>
-        <div className='text-base text-black'>
-          <p className='mb-8 text-justify'>{product.description || 'No additional description.'}</p>
-        </div>               
+        <div className='text-base mb-10'>
+          {product.description ? (
+            product.description.split('\n').map((line, index) => (       
+              line.trim() === "" ? (
+                <br key={index} />
+              ) : (
+                <p key={index} className='mb-2'>{line}</p>
+              )
+            ))
+          ) : (
+            <p>No additional description.</p>
+          )}
+        </div>
       </div>
+
     </div>
   );
 };

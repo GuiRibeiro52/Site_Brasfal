@@ -97,7 +97,7 @@ const Produtos = () => {
           </select>
         </div>
       </div>
-      <div className="flex justify-center xl:justify-center items-center max-w-[1536px] mx-auto">
+      <div className="flex justify-center xl:justify-center items-center max-w-[1536px] mx-auto mt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
           {getPaginatedProducts().map(product => (
             <div key={product.id} className="w-[285px] h-[350px] m-4 relative group bg-secondary rounded-lg">

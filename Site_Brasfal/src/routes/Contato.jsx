@@ -2,7 +2,7 @@
 const Contato = () => {
   return (
     <div className="m-10 flex flex-col gap-9 container mx-auto px-4 py-8">
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center mt-8">
         <h2>QUERIDOS CLIENTES</h2>
         <p>Ficaremos felizes em atendê-los</p>
         <p>Escolha um dos canais abaixo</p>
